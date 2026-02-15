@@ -1,75 +1,49 @@
-# Nuxt Minimal Starter
+# 📝 Notes SPA (Nuxt 4 + Server API)
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+SPA приложение заметок с поддержкой CRUD, undo/redo, серверного API и сохранением данных между перезапусками контейнера.
 
-## Setup
+## 🚀 Стек
 
-Make sure to install dependencies:
+- Nuxt 4 (SPA mode)
+- Nitro Server API
+- TypeScript (strict)
+- Pinia
+- SCSS (без UI-китов)
+- Docker / Docker Compose
 
-```bash
-# npm
-npm install
+---
 
-# pnpm
-pnpm install
+# ⚙️ Локальный запуск (без Docker)
 
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
+## 1️⃣ Установка зависимостей
 
 ```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
+  npm install
 ```
 
-## Production
-
-Build the application for production:
+## 2️⃣ Запуск dev режима
 
 ```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
+  npm run dev
 ```
 
-Locally preview production build:
+Приложение будет доступно:
+
+http://localhost:3000
+
+Server API:
+
+http://localhost:3000/api/notes
+
+
+# 🐳 Запуск через Docker
+
+## 📦 Сборка и запуск
 
 ```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
+   docker-compose up --build
 ```
+После запуска приложение будет доступно:
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+http://localhost:3000
+
