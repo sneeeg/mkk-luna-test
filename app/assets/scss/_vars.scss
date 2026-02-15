@@ -1,0 +1,15 @@
+$bg: #0f1220;
+$card: #171a2b;
+$text: #e9ecff;
+$muted: rgba(233, 236, 255, .7);
+$border: rgba(233, 236, 255, .12);
+$primary: #7c5cff;
+$danger: #ff4d6d;
+
+$radius: 14px;
+$shadow: 0 12px 30px rgba(0, 0, 0, .35);
+
+@mixin focusRing {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(124, 92, 255, .35);
+}
