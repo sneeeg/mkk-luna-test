@@ -163,9 +163,21 @@ async function deleteOrClose() {
       </div>
 
       <div style="display:flex; gap:10px; flex-wrap:wrap;">
-        <BaseButton variant="ghost" :disabled="!history.canUndo()" @click="history.undo">Отменить</BaseButton>
-        <BaseButton variant="ghost" :disabled="!history.canRedo()" @click="history.redo">Повторить</BaseButton>
-        <BaseButton variant="danger" @click="deleteOrClose">{{ isNew ? 'Закрыть' : 'Удалить' }}</BaseButton>
+        <BaseButton
+            variant="ghost"
+            @click="dirty ? cancelEdit() : router.push('/')"
+        >
+          ← На главную
+        </BaseButton>
+        <BaseButton variant="ghost" :disabled="!history.canUndo()" @click="history.undo">
+          Отменить
+        </BaseButton>
+        <BaseButton variant="ghost" :disabled="!history.canRedo()" @click="history.redo">
+          Повторить
+        </BaseButton>
+        <BaseButton variant="danger" @click="deleteOrClose">
+          {{ isNew ? 'Закрыть' : 'Удалить' }}
+        </BaseButton>
       </div>
     </div>
 
